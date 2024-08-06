@@ -1,14 +1,13 @@
+import { PhotoStyled } from "../../../styles/styles";
 
-import { VideoStyled } from '../../../styles/styles';
-
-type video = {
-  src?: string;
+type PhotoType = {
+  image: string;
 };
 
-const Video = ({ src }: video) => {
+const PhotoSection = ({ image }: PhotoType) => {
   return (
-    <VideoStyled  src={src} autoPlay muted loop />
+    <PhotoStyled  src={image} />
   );
 };
 
-export default Video;
+export default PhotoSection;

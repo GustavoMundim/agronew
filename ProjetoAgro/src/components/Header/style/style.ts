@@ -29,9 +29,12 @@ export const Nav = styled.nav `
         > a {
         text-decoration: none;
         color:  rgb(41, 41, 40);
-        font-size: 0.8em;
+        font-size: 0.9em;
         font-weight: 600;
         color: black;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-transform: uppercase;}
+
+        &:hover {
+        text-decoration: underline}
         }
 `

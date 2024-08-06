@@ -13,10 +13,7 @@ const Header = () => {
             <a href=''>Ofertas</a> 
           </li>
           <li>
-            <a href=''>Clima Geral</a> 
-          </li>
-          <li>
-            <a href=''>Cotação moedas</a> 
+            <a href=''>Login</a> 
           </li>
         </ul>
       </Nav>

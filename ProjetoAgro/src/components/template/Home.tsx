@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import { SectionHome, Noticias, CardsNotices} from '../../styles/styles';
+
+import { SectionHome, Container} from '../../styles/styles';
 import Banner from '../organisms/BannerVideo';
+import MenuBar from '../organisms/Menu';
 
 function Homepage() {
+
   return (
     <>
     <SectionHome>
       <Banner />
-      <Noticias>
-      </Noticias>
+      <MenuBar/>
     </SectionHome>
     </>
   )
@@ -16,3 +17,4 @@ function Homepage() {
 }
 
 export default Homepage;
+

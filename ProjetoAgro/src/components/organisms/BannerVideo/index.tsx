@@ -1,14 +1,14 @@
 import { Overlay } from '../../../styles/global';
-import { BannerVideo } from '../../../styles/styles';
-import Video from '../../atoms/PhotoBanner';
-import agro from '../../../assets/Banner/agro.mp4'
+import { BannerPhoto } from '../../../styles/styles';
+import PhotoSection from '../../atoms/PhotoBanner';
+import photo from '../../../assets/Banner/agro.jpg'
 
 const Banner = () => {
   return (
-    <BannerVideo>
-        <Video src={agro}/>
-        <Overlay color="#fff" opacity='0.4' />
-    </BannerVideo>
+    <BannerPhoto>
+        <PhotoSection image={photo}/>
+        <Overlay color="#fff" opacity='0.5' />
+    </BannerPhoto>
   )
 };
 
