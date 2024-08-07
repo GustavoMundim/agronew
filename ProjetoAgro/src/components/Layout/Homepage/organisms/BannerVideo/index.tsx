@@ -1,9 +1,12 @@
-import { Overlay } from '../../../styles/global';
-import { BannerPhoto } from '../../../styles/styles';
+
+import { Overlay } from '../../../../../styles/global';
+import { BannerPhoto } from '../../../../../styles/styles';
 import PhotoSection from '../../atoms/PhotoBanner';
-import photo from '../../../assets/Banner/agro.jpg'
+import photo from '../../../../../assets/Banner/agro.jpg';
+
 
 const Banner = () => {
+
   return (
     <BannerPhoto>
         <PhotoSection image={photo}/>

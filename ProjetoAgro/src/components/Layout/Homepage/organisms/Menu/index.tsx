@@ -1,9 +1,9 @@
 
-import { ico_card } from '../../../utils/ico';
-import CreateCard from '../Card';
-import { Container } from '../../../styles/styles';
-import MenuText from '../../molecules/Menu';
+import { ico_card } from '../../../../../utils/ico';
+import CreateCard from '../../molecules/Card';
+import { Container } from '../../../../../styles/styles';
 import { useState } from 'react';
+import Weather from '../Weather';
 
 const MenuBar = () => {
     const [selectedText, setSelectedText] = useState<string>('');
@@ -21,8 +21,9 @@ const MenuBar = () => {
         <CreateCard isList={ico_card} onCardSelect={handleCardSelect}/>
     </Container>
     <Container height='800px'>
-      <Container height='90%' BackgroundColor='#343434' margin='200px'>
-        <MenuText value={selectedText}/>
+        <Container height='85%' BackgroundColor='#343434' margin='100px' image={true} width='80%' radius='8px' r_align={true} column={true}>
+          <Weather />
+        <Container />
       </Container>
     </Container>
 

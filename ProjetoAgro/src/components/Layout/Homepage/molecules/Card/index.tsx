@@ -1,7 +1,7 @@
 
-import { Card, Container } from '../../../styles/styles';
+import { Card, Container } from '../../../../../styles/styles';
 import CreateIco from '../../atoms/Icons';
-import CreateText from '../../atoms/Text';
+import Text from '../../atoms/Text';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { useState } from 'react';
 
@@ -35,7 +35,7 @@ const CreateCard = ({ icon, text, isList, onCardSelect }: CreateCardProps) => {
               <CreateIco icon={item.icon} />
             </Container>
             <Container height='50%'>
-              <CreateText text={item.text} />
+              <Text text={item.text} />
             </Container>
           </Card>
         ))
@@ -45,7 +45,7 @@ const CreateCard = ({ icon, text, isList, onCardSelect }: CreateCardProps) => {
             {icon && <CreateIco icon={icon} />}
           </Container>
           <Container height='50%'>
-            <CreateText text={text} />
+            <Text text={text} />
           </Container>
         </Card>
       )}

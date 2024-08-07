@@ -1,4 +1,5 @@
-import { PhotoStyled } from "../../../styles/styles";
+
+import { PhotoStyled } from "../../../../../styles/styles";
 
 type PhotoType = {
   image: string;

@@ -1,7 +1,7 @@
 
-import { SectionHome, Container} from '../../styles/styles';
-import Banner from '../organisms/BannerVideo';
-import MenuBar from '../organisms/Menu';
+import { SectionHome} from '../../styles/styles';
+import Banner from '../Layout/Homepage/organisms/BannerVideo';
+import MenuBar from '../Layout/Homepage/organisms/Menu';
 
 function Homepage() {
 
