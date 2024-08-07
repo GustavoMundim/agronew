@@ -4,6 +4,7 @@ import Homepage from './components/template/Home.tsx'
 import { Global } from './styles/global.ts'
 import Header from './components/Header/index.tsx'
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Header />

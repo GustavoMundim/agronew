@@ -13,4 +13,6 @@ export interface ContainerProps {
     flex_adjust?: string;
     opacity?: string;
     display?: boolean;
+    gap?: string;
+    translate?: string;
 }

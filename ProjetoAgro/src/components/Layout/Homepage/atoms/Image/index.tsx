@@ -1,12 +1,12 @@
 
 type ImageProps = {
-    src: string
+    image: string
 }
 
-const Image = ({src}: ImageProps) => {
+const Image = ({image}: ImageProps | any) => {
 
   return (
-    <img src={src}></img>
+    <img src={image}></img>
   )
 };
 

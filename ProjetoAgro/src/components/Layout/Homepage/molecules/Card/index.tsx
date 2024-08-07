@@ -10,16 +10,20 @@ interface CreateCardProps {
   text?: string;
   isList?: { icon: IconDefinition; text: string }[];
   onCardSelect?: (text: string) => void;
+  onClick?: () => void;
 }
 
-const CreateCard = ({ icon, text, isList, onCardSelect }: CreateCardProps) => {
+const CreateCard = ({ icon, text, isList, onCardSelect, onClick }: CreateCardProps) => {
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
   const handleCardClick = (index: number, text: string) => {
     setSelectedIndex(index);
     if (onCardSelect) {
       onCardSelect(text);
-    }
+    } 
+
+    
   };
 
   return (

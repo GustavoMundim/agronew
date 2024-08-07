@@ -3,37 +3,27 @@ import { Container } from '../../../../../styles/styles';
 import Text from '../../atoms/Text';
 import Image from '../../atoms/Image';
 import Dados from '../../molecules/Dados';
+import InformacoesWeather from '../../molecules/InformacoesWeather';
+import Temperatura from '../../molecules/Temperatura';
+import { Card } from '../../../../../styles/styles';
+
 const Weather = () => {
   return (
     <>
-    {/*  CIDADE PRINCIPAL */}
     <Container height='55%' r_align={true} column={true}>
       <Container height='80%' BackgroundColor='#000f' opacity='0.75' flex_adjust='start'>
-
-          {/* DADOS */}
           <Dados texto='Quarta feira 07 de outubro de 2024 09:53'/>
-
-          {/* temperatura */}
-          <Container width='50%'>
-            <Text text='23°C' classname='temperature' />
-          </Container>
-
-          {/*  informacoes adicionais */}
-          <Container width='25%' column={true} display={true}>
-            <Container height='50%' flex_adjust='start' column={true} display={true}>
-              <Image src='https://openweathermap.org/img/wn/01d@2x.png'/>
-              <Text text='Nublado' classname='text-weather-info-2'/>
-            </Container>
-            <Container height='50%' flex_adjust='center' column={true} display={true}>
-              <Text text='29°C' classname='text-data-2-card'/>
-            </Container>
-        </Container>
-
-      {/*  LAYOUT CITY */}
+          <Temperatura weather='29°c'/>
+          <InformacoesWeather ico_weather='https://openweathermap.org/img/wn/01d@2x.png' text='Nublado' />
       </Container>
-      <Container height='30%' flex_adjust='start' BackgroundColor="#fff" opacity='0.7' padding='10px'>
+      <Container height='30%' flex_adjust='start' BackgroundColor="#fff" opacity='0.7' padding='2px'>
           <Text text='Uberlândia' classname='cidade-principal'/>
       </Container>  
+    </Container>
+    <Container height='50%' gap='15px' display={true}>
+        <Card width='190px' height='200px' radius='10px' border='none' hover='none' color='#fff'></Card>
+        <Card width='190px' height='200px' radius='10px' border='none' hover='none' color='#fff'></Card>
+        <Card width='190px' height='200px' radius='10px' border='none' hover='none' color='#fff'></Card>
     </Container>
 
     </>

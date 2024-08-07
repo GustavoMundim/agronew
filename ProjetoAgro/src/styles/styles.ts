@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import wallpaper from '../assets/wallpaper/agro.jpg'
 import { ContainerProps } from "../@types/types";
 import weather from '../assets/Banner/sky.jpg'
 
@@ -38,12 +37,14 @@ export const Container = styled.div<ContainerProps> `
     ${props => props.radius && `border-radius: ${props.radius}; overflow: hidden;`};
     ${props => props.column ? `flex-direction: column;` : `display: flex`};
     ${props => props.display && `display: flex`};
+    transform: translateX(${props => props.translate});
     justify-content: center;
     ${props => props.r_align ? `align-items: start` : `align-items: center`};
     position: relative;
+    transition: all 1.5s ease;
     ${props => props.opacity && `opacity: ${props.opacity}`};
     ${props => props.flex_adjust && `justify-content: ${props.flex_adjust}; align-items: ${props.flex_adjust}; gap: 10px;`};
-
+    gap: ${props => props.gap ? `${props.gap}`: `0px`};
     & .text-weather-info-2 {
         color: #fff;
         font-size: 20px;
@@ -66,7 +67,7 @@ export const Container = styled.div<ContainerProps> `
      }
      
     & .cidade-principal {
-        font-size: 60px;
+        font-size: 70px;
         opacity: 0.8;
         color: black;
         text-shadow: 0px 0px 2px  #fff;
@@ -85,24 +86,26 @@ export const Container = styled.div<ContainerProps> `
      `
 
 
-export const Card = styled.div<{color?: string, width?: string, height?: string, hover?: string}>  `
-    width: 350px;
-    height: 220px;
+export const Card = styled.div<{color?: string, width?: string, height?: string, hover?: string, radius?: string, border?: string}>  `
+    width: ${props => props.width ? `${props.width}`: `350px;`};
+    height:${props => props.height ? `${props.height}` : `220px`};
     background: ${props => props.color ? `${props.color}` : '#447558'};
+    border-radius: ${props => props.radius ? `${props.radius}` : ``};
     bottom: 5%;
     transition: all 0.5 ease;
-    border: 1px solid #343434;
+    border: ${props => props.border === 'none' ?  `` : `1px solid #343434;`}
 
     &.select-card { 
         transition: all 2s ease;
         background: #45594d;
     }
 
+
+
     &:hover {
         cursor: pointer;
         box-shadow: 0px 0px 2px #343434;
-        background: #45594d;
-        background: ${props => props.hover && `${props.hover}`}
+        ${props => props.hover == 'none' ? `` : `background: #45594d`}
     }
 
     &:hover .ico-text {
