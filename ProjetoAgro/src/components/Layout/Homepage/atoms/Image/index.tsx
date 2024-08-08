@@ -1,13 +1,12 @@
-
 type ImageProps = {
-    image: string
+  image: string;
+  className?: string; // Changed from `class` to `className`
 }
 
-const Image = ({image}: ImageProps | any) => {
-
-  return (
-    <img src={image}></img>
-  )
+const Image = ({ image, className }: ImageProps) => {
+return (
+  <img src={image} className={className} alt="description" /> 
+);
 };
 
 export default Image;

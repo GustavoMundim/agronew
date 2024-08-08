@@ -7,6 +7,7 @@ import Text
 
 type TemperatureType = {
     weather: string
+    
 }
 
 const Temperatura = ({weather}: TemperatureType) => {

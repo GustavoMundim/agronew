@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Container } from '../../../../../styles/styles';
 import Image from '../../atoms/Image';
 import Text from '../../atoms/Text';

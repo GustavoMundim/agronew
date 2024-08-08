@@ -5,7 +5,7 @@ export interface ContainerProps {
     position?: boolean, 
     padding?: string,
     margin?: string,
-    image?: boolean;
+    image?: string;
     radius?: string;
     r_align?: boolean;
     column?: boolean;
@@ -15,4 +15,10 @@ export interface ContainerProps {
     display?: boolean;
     gap?: string;
     translate?: string;
+    border?: string;
+    isAnimation?: string;
+    border_color?: string;
+    bottom?: string;
+    left?: string;
+    border_radius_all?:  boolean;
 }
